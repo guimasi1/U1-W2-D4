@@ -158,31 +158,21 @@ average(array);
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
-// let compareStrings = 0;
-// let longestWord = "";
+const parole = ["cucu", "tututu", "mammamia"];
+let comparator = 0;
+let longestWord = "";
 
-// function longest(arrayOfStrings) {
-//   let compareStrings = 0;
+function longest(strings) {
+  for (let i = 0; i < strings.length; i++) {
+    if (strings[i].length > comparator) {
+      longestWord = strings[i];
+      comparator = strings[i].length;
+    }
+  }
+}
 
-//   for (let i = 0; i < arrayOfStrings.length; i++) {
-//     if (arrayOfStrings[i].length > compareStrings) {
-//       compareStrings = arrayOfStrings.length;
-//       longestWord = arrayOfStrings[i];
-//       console.log(arrayOfStrings[i].length);
-//       console.log(longestWord);
-
-//       //   console.log(compareStrings);
-//     }
-//     //     if (arrayOfStrings[i].length > compareStrings) {
-//     //       compareStrings = arrayOfStrings[i].length;
-//     //       longestWord = arrayOfStrings[i];
-//     //     }
-//     //   }
-//   }
-// }
-// console.log(longestWord);
-
-// console.log(longest(["ciao", "bellissimo", "campo"]));
+longest(parole);
+console.log(longestWord);
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
