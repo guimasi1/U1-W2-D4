@@ -209,7 +209,15 @@ antiSpam("questa mail è SPAM");
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const date1 = new Date("09/12/2023");
+const date2 = new Date("09/10/2023");
+console.log(date1);
+
+const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+
+const diffDays = Math.round(Math.abs((date1 - date2) / oneDay));
+
+console.log(diffDays);
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
